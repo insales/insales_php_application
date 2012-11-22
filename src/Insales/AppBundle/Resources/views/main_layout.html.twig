@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" sizes="16x16" href="{{ asset('bundles/insales/images/favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/insales/css/main.css') }}" />
+    </head>
+    <body>
+      <div class='containerPage'>
+        <div class='head'>
+          <div class='headTop'>
+            <div class='leftHead'>
+              <h1>{{ application_name }}</h1>
+            </div>
+            <div class='rightHead'>
+              <p>
+                <a href="#support">"Техподдержка"</a>
+                <image src='techsupport_ico.gif'/>
+                |
+                <a href='#forum', target='_blank'>Форум</a>
+                |
+                <a href="{{ path('_logout') }}">Выйти</a>
+              </p>
+            </div>
+          </div>
+          <div class='leftTabs'>
+            <div class='Tab'>
+              <div class='tabLeftCorner'></div>
+              <div class='tabContent'>
+                <a href='#home_path', title='Вернуться в магазин'><image src="{{ asset('bundles/insales/images/home_inactive_icon.png') }}"></a>
+              </div>
+              <div class='tabRightCorner'></div>
+            </div>
+            <div class='activeTab'>
+              <div class='tabLeftCorner'></div>
+              <div class='tabContent'>
+                <a href='#root_path'>Application name</a>
+              </div>
+              <div class='tabRightCorner'></div>
+            </div>
+          </div>
+        </div>
+        <div class='content'>
+          <h1>
+            <a href="#back_to_previous_page">
+              <image src="{{ asset('bundles/insales/images/back_ico.png') }}" style = 'margin-bottom:-5px;' alt='На предыдущую страницу' title='На предыдущую страницу'/>
+            </a>
+          </h1>
+          <h1>
+            <div id='page_title' style = "display:inline">Заголовок страницы</div>
+          </h1>
+          {% block content %}
+          {% endblock %}
+        </div>
+        <div class='footer'>
+          <div>
+            <p>
+              &copy;
+              <span style="color:#752F16;font-weight:bold;">InSales 2012.&nbsp;|&nbsp;
+                <a href='http://www.insales.ru/terms'>Условия предоставления услуг</a>
+              <span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <script>
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script>
+        <!--//--><![CDATA[//><!--
+        var pageTracker = _gat._getTracker('UA-6674000-2');
+        pageTracker._setDomainName("#{MyApp::api_host}");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+        //--><!]]>
+      </script>
+    </body>
+</html>

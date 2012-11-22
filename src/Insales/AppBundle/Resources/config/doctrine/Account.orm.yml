@@ -1,0 +1,19 @@
+Insales\AppBundle\Entity\Account:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        insales_subdomain:
+            type: string
+            length: '255'
+        password:
+            type: string
+            length: '255'
+        insales_id:
+            type: integer
+            length: null
+    lifecycleCallbacks: {  }

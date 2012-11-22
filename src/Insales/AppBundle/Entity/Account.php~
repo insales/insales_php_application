@@ -1,0 +1,111 @@
+<?php
+
+namespace Insales\AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Account
+ */
+class Account
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $insales_subdomain;
+
+    /**
+     * @var string
+     */
+    private $password;
+
+    /**
+     * @var integer
+     */
+    private $insales_id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set insales_subdomain
+     *
+     * @param string $insalesSubdomain
+     * @return Account
+     */
+    public function setInsalesSubdomain($insalesSubdomain)
+    {
+        $this->insales_subdomain = $insalesSubdomain;
+    
+        return $this;
+    }
+
+    /**
+     * Get insales_subdomain
+     *
+     * @return string 
+     */
+    public function getInsalesSubdomain()
+    {
+        return $this->insales_subdomain;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return Account
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set insales_id
+     *
+     * @param integer $insalesId
+     * @return Account
+     */
+    public function setInsalesId($insalesId)
+    {
+        $this->insales_id = $insalesId;
+    
+        return $this;
+    }
+
+    /**
+     * Get insales_id
+     *
+     * @return integer 
+     */
+    public function getInsalesId()
+    {
+        return $this->insales_id;
+    }
+}

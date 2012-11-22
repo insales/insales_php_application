@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>InSales.ru</title>
+        <link rel="icon" sizes="16x16" href="{{ asset('bundles/insales/images/favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/insales/css/login.css') }}" />
+    </head>
+    <body>
+      <div class='main'>
+        <h1>{{ application_name }}</h1>
+        <form name='login' method='post' action='/process_login'>
+          <p>
+            <label for='shop'>Адрес вашего магазина:
+          </p>
+          {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="error">
+              {{ flashMessage }}
+            </div>
+          {% endfor %}
+          <p>
+            http://<input type='text' name='shop' style='width:300px;'/>
+            <br/>
+            <small>Пример: mysoft.myinsales.ru</small>
+          </p>
+          <p class='or'><input class='button' type='submit' value='Войти' name='commit'/></p>
+        </form>
+      </div>
+    </body>
+    <script>
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script>
+      <!--//--><![CDATA[//><!--
+      var pageTracker = _gat._getTracker('UA-6674000-2');
+      pageTracker._setDomainName("#{MyApp::api_host}");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+      //--><!]]>
+    </script>
+</html>
