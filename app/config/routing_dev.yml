@@ -1,30 +1,5 @@
-_main_page:
-    pattern: /main_page
-    defaults: { _controller: InsalesAppBundle:Main:index }
-
-_login:
-    pattern: /login
-    defaults: { _controller: InsalesAppBundle:Session:login }
-
-_autologin:
-    pattern: /autologin
-    defaults: { _controller: InsalesAppBundle:Session:autologin }
-
-_process_login:
-    pattern: /process_login
-    defaults: { _controller: InsalesAppBundle:Session:processlogin }
-
-_logout:
-    pattern: /logout
-    defaults: { _controller: InsalesAppBundle:Session:logout }
-
-_install:
-    pattern: /install
-    defaults: { _controller: InsalesAppBundle:Application:install }
-
-_uninstall:
-    pattern: /uninstall
-    defaults: { _controller: InsalesAppBundle:Application:uninstall }
+_main:
+    resource: routing.yml
 
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
@@ -37,6 +12,3 @@ _profiler:
 _configurator:
     resource: "@SensioDistributionBundle/Resources/config/routing/webconfigurator.xml"
     prefix:   /_configurator
-
-_main:
-    resource: routing.yml

@@ -1,21 +1,24 @@
 parameters:
-    database_driver: pdo_sqlite
+    database_driver: mysql
     database_host: localhost
     database_port: null
     database_name: insales_php_app
-    database_user: root
+    database_user: dbuser
     database_password: dbpass
+
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: null
     mailer_password: null
+
     locale: en
-    secret: 5dc159a7790662ededa2f3e4b655e9e4d2d88396
-    database_path: /home/slip/www/insales_php_app/app/config/sqlite_base.db
+    secret: INSERT_SOME_RANDOM_STRING_HERE
 
     api_secret: api_secret
     api_key:    api_key
     api_host:   insales-php-app.local
     api_autologin_path: autologin
+    api_key: insales_api_key
 
-    application_name: Название приложения
+    ga_tracking: UA-XXXXXXX-2
+    application_name: 'Название приложения'

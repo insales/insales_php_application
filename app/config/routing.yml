@@ -2,3 +2,35 @@
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
+
+_root:
+    pattern: /
+    defaults: { _controller: InsalesAppBundle:Main:index }
+
+_main_page:
+    pattern: /main_page
+    defaults: { _controller: InsalesAppBundle:Main:index }
+
+_login:
+    pattern: /login
+    defaults: { _controller: InsalesAppBundle:Session:login }
+
+_autologin:
+    pattern: /autologin
+    defaults: { _controller: InsalesAppBundle:Session:autologin }
+
+_process_login:
+    pattern: /process_login
+    defaults: { _controller: InsalesAppBundle:Session:processlogin }
+
+_logout:
+    pattern: /logout
+    defaults: { _controller: InsalesAppBundle:Session:logout }
+
+_install:
+    pattern: /install
+    defaults: { _controller: InsalesAppBundle:Application:install }
+
+_uninstall:
+    pattern: /uninstall
+    defaults: { _controller: InsalesAppBundle:Application:uninstall }
